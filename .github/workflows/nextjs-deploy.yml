@@ -38,6 +38,6 @@ jobs:
           remote-port: 22
 
           # Local path for files to deploy
-          # local-path: ./client/out
+          local-path: ./out
 
           sync: full
