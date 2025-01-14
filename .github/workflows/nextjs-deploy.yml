@@ -38,4 +38,4 @@ jobs:
           remote-port: 22
 
           # Local path for files to deploy
-          local-path: /home/runner/work/swipeting/swipeting/out
+          local-path: ./client/out
