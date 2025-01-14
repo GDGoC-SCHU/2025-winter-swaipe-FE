@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 스와이프팅 클라이언트
 
-## Getting Started
+## 환경
 
-First, run the development server:
+node: ^20 <br/>
+npm / pnpm 사용 <br/>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+npm run dev / pnpm run dev 로 프로젝트 실행 가능. 다른 js 라이브러리 패키지 사용해도 되지만, 무슨 문제가 발생할지 모름
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 개발 환경
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+css는 tailwind, 전역 상태 관리는 recoil, 사용 <br/>
+기본 디자인은 mui를 사용할지 고민 중...
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## PR 정책
 
-## Learn More
+1. main 또는 deploy에서 작업 브랜치 생성 (main 추천) <br/>
+2. 작업 이후 커밋하기
+3. PR을 main으로 생성하기
+4. build test 확인 후 성공시 merge 하기
+5. 새로운 배포가 필요 할 경우 main -> deploy로 PR 생성 후 merge
 
-To learn more about Next.js, take a look at the following resources:
+## 관련 문서
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[디자인 피그마](https://www.figma.com/design/6slpTaScpL6lF6PTrCfItj/2024-%EB%8F%84%EB%84%9B-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?t=9rX3qszWH3pbSXcD-0)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[노션 문서](https://www.notion.so/Donut-Project-16881411707f806aaf57d89b2788975c?pvs=4)
