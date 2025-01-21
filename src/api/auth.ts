@@ -1,4 +1,4 @@
-import axios from "@axios"
+//import axios from "@axios"
 
 export enum UserStatus {
   PENDING = "PENDING",
@@ -19,7 +19,7 @@ export type User = {
 }
 
 export async function kakaoLogin() {
-  return new Promise<{ data: User; status: number }>((resolve, reject) => {
+  return new Promise<{ data: User; status: number }>((resolve) => {
     resolve({
       data: {
         id: "id",
