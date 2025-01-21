@@ -25,4 +25,3 @@ css는 bootstrap, 전역 상태 관리는 recoil, 사용 <br/>
 [디자인 피그마](https://www.figma.com/design/6slpTaScpL6lF6PTrCfItj/2024-%EB%8F%84%EB%84%9B-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?t=9rX3qszWH3pbSXcD-0)
 
 [노션 문서](https://www.notion.so/Donut-Project-16881411707f806aaf57d89b2788975c?pvs=4)
-# 2025-winter-swaipe-FE
