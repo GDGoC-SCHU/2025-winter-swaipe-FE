@@ -3,13 +3,16 @@
 import "./page.css"
 import { useEffect, useState } from "react"
 import { kakaoLogin, User } from "@/api/auth"
-import mainLogo from "./mainLogo.png"
+import mainLogo from "../common/images/mainLogo.png"
 import swaipeKr from "./swaipeKr.png"
 import kakaoLoginButton from "./kakaoLoginButton.png"
 import Image from "next/image"
 import { Box, Stack } from "@mui/material"
+import { useRouter } from "next/navigation"
 
 export default function Home() {
+  const router = useRouter()
+
   const [userData, setUserData] = useState<User | undefined>()
   useEffect(() => {
     init()
@@ -50,6 +53,7 @@ export default function Home() {
           alt="kakaoLoginButton"
           width="153"
           height="39"
+          onClick={() => router.push("/identityVerification")}
         />
       </Stack>
     </Stack>
