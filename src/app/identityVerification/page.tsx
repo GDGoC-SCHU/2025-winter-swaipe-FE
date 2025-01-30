@@ -27,13 +27,11 @@ export default function Intro() {
   }
 
   function handleNext() {
-    setCurrentComponentIndex((prev) => {
-      if (prev === 2) {
-        router.push("/navigation/home")
-        return 0
-      }
-      return prev + 1
-    })
+    if (currentComponentIndex === 2) {
+      router.push("/navigation/home")
+      return
+    }
+    setCurrentComponentIndex((prev) => prev + 1)
   }
 
   return (
