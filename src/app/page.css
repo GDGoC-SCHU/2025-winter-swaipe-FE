@@ -1,0 +1,40 @@
+.logo_image {
+  animation: LogoAnimation 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes LogoAnimation {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.other {
+  height: 0;
+  opacity: 0;
+  animation: others_height 2s forwards;
+}
+
+@keyframes others_height {
+  0% {
+    height: 0;
+  }
+  30% {
+    height: 0;
+  }
+  60% {
+    opacity: 0;
+    height: 288px;
+  }
+  100% {
+    opacity: 1;
+    height: 288px;
+  }
+}
