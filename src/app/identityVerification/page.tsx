@@ -33,7 +33,7 @@ export default function Intro() {
 
   function handleNext() {
     if (currentComponentIndex === 2) {
-      router.push("/navigation/home")
+      router.push("/navigation")
       return
     }
     //Todo: 형은님 화면 만들면 조건 제거

@@ -4,27 +4,32 @@ import mainLogo from "@/common/images/mainLogo.png"
 import { Button, Stack } from "@mui/material"
 import Image from "next/image"
 import { useState } from "react"
-import Home from "./home/page"
-import Heart from "./heart/page"
-import My from "./my/page"
-import Alarm from "./alarm/page"
+import Home from "./home/Home"
+import Heart from "./heart/Heart"
+import My from "./my/My"
+import Alarm from "./alarm/Alarm"
+
 import HomeIcon from "./Home.png"
+import HomeFillIcon from "./HomeFill.png"
 import HeartIcon from "./Heart.png"
+import HeartFillIcon from "./HeartFill.png"
 import MyIcon from "./My.png"
+import MyFillIcon from "./MyFill.png"
 import AlarmIcon from "./Alarm.png"
+import AlarmFillIcon from "./AlarmFill.png"
 
 type Pages = "home" | "heart" | "my" | "alarm"
 
-export default function Navigation({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function Navigation() {
   const [currentPage, setCurrentPage] = useState<Pages>("home")
 
   return (
     <Stack height="100svh" direction="column" gap="12px" width="100%">
       <Stack className="p-4 flex-1 " alignItems="center" width="100%">
         <Image src={mainLogo} width="101" alt="mainLogo" />
-        <Stack></Stack>
+        <Stack>
+          <PageComponent page={currentPage} />
+        </Stack>
       </Stack>
       <Stack
         gap="8px"
@@ -41,7 +46,11 @@ export default function Navigation({
           alignItems="center"
           onClick={() => setCurrentPage("home")}
         >
-          <Image src={HomeIcon} width="32" height="32" alt="Home" />
+          {currentPage === "home" ? (
+            <Image src={HomeFillIcon} width="32" height="32" alt="Home" />
+          ) : (
+            <Image src={HomeIcon} width="32" height="32" alt="Home" />
+          )}
           HOME
         </Stack>
         <Stack
@@ -50,7 +59,11 @@ export default function Navigation({
           alignItems="center"
           onClick={() => setCurrentPage("heart")}
         >
-          <Image src={HeartIcon} width="32" height="32" alt="Heart" />
+          {currentPage === "heart" ? (
+            <Image src={HeartFillIcon} width="32" height="32" alt="Heart" />
+          ) : (
+            <Image src={HeartIcon} width="32" height="32" alt="Heart" />
+          )}
           HEART
         </Stack>
         <Stack
@@ -59,7 +72,11 @@ export default function Navigation({
           alignItems="center"
           onClick={() => setCurrentPage("my")}
         >
-          <Image src={MyIcon} width="32" height="32" alt="My" />
+          {currentPage === "my" ? (
+            <Image src={MyFillIcon} width="32" height="32" alt="My" />
+          ) : (
+            <Image src={MyIcon} width="32" height="32" alt="My" />
+          )}
           MY
         </Stack>
         <Stack
@@ -68,7 +85,11 @@ export default function Navigation({
           alignItems="center"
           onClick={() => setCurrentPage("alarm")}
         >
-          <Image src={AlarmIcon} width="32" height="32" alt="Alarm" />
+          {currentPage === "alarm" ? (
+            <Image src={AlarmFillIcon} width="32" height="32" alt="Alarm" />
+          ) : (
+            <Image src={AlarmIcon} width="32" height="32" alt="Alarm" />
+          )}
           ALARM
         </Stack>
       </Stack>
