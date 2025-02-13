@@ -55,11 +55,12 @@ export default function My() {
         {profileCardDataList.map((profileCardData, index) => (
           <Stack
             m="0"
+            key={index}
             style={{
               scrollSnapAlign: "start",
             }}
           >
-            <ProfileCard key={index} {...profileCardData} />
+            <ProfileCard {...profileCardData} />
           </Stack>
         ))}
       </Stack>

@@ -1,7 +1,7 @@
 "use client"
 
 import mainLogo from "@/common/images/mainLogo.png"
-import { Button, Stack } from "@mui/material"
+import { Stack } from "@mui/material"
 import Image from "next/image"
 import { useState } from "react"
 import Home from "./home/Home"
