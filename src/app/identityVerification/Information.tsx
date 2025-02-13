@@ -18,7 +18,7 @@ export default function Information({
   const [hobbies, setHobbies] = useState<string[]>([])
 
   function setHobbie(event: SelectChangeEvent) {
-    const value = event.target.value as any
+    const value = event.target.value as unknown as string[]
     setHobbies(value)
   }
 
@@ -73,7 +73,7 @@ export default function Information({
             label="취미"
             fullWidth
             multiple
-            value={hobbies as any}
+            value={hobbies as unknown as string}
             onChange={setHobbie}
           >
             <MenuItem value="영화보기">영화보기</MenuItem>
