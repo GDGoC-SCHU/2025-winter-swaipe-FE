@@ -1,13 +1,11 @@
 # 스와브팅 클라이언트
 
-## 환경
+## 개발 환경
 
 node: ^20 <br/>
 npm / pnpm 사용 <br/>
 
 npm run dev / pnpm run dev 로 프로젝트 실행 가능. 다른 js 라이브러리 패키지 사용해도 되지만, 무슨 문제가 발생할지 모름
-
-## 개발 환경
 
 react - 19 + next - 15 + ts 사용<br/>
 전역 상태 관리는 recoil, 사용 <br/>
@@ -26,3 +24,5 @@ react - 19 + next - 15 + ts 사용<br/>
 [디자인 피그마](https://www.figma.com/design/6slpTaScpL6lF6PTrCfItj/2024-%EB%8F%84%EB%84%9B-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?t=9rX3qszWH3pbSXcD-0)
 
 [노션 문서](https://www.notion.so/Donut-Project-16881411707f806aaf57d89b2788975c?pvs=4)
+
+[API 명세서](https://www.notion.so/API-18381411707f800a96b4e0a9da865f4e?pvs=4)

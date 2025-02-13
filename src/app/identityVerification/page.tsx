@@ -5,33 +5,42 @@ import { Box, Button, Stack } from "@mui/material"
 import Image from "next/image"
 import { useState } from "react"
 import PhoneNumberVerification from "./PhoneNumberVerification"
+import ProfileImage from "./ProfileImage"
 import { useRouter } from "next/navigation"
+import Information from "./Information"
 
 export default function Intro() {
   const router = useRouter()
+  const [disableNextButton, setDisableNextButton] = useState(true)
   const [currentComponentIndex, setCurrentComponentIndex] = useState(0)
 
   function CurrentDisplayComponent() {
     switch (currentComponentIndex) {
       case 0:
-        return <PhoneNumberVerification />
+        return (
+          <PhoneNumberVerification
+            setDisableNextButton={setDisableNextButton}
+          />
+        )
       case 1:
-        return <div>PhoneCheck</div>
+        return <ProfileImage />
       case 2:
-        return <div>PhoneCheck</div>
+        return <Information setDisableNextButton={setDisableNextButton} />
       default:
-        return <div>PhoneCheck</div>
+        return undefined
     }
   }
 
   function handleNext() {
-    setCurrentComponentIndex((prev) => {
-      if (prev === 2) {
-        router.push("/navigation/home")
-        return 0
-      }
-      return prev + 1
-    })
+    if (currentComponentIndex === 2) {
+      router.push("/navigation")
+      return
+    }
+    //Todo: 형은님 화면 만들면 조건 제거
+    if (currentComponentIndex !== 0) {
+      setDisableNextButton(true)
+    }
+    setCurrentComponentIndex((prev) => prev + 1)
   }
 
   return (
@@ -43,7 +52,6 @@ export default function Intro() {
         width="101"
         height="111"
       />
-      <Box fontSize="20px">본인인증</Box>
       <Stack className="flex-1">
         <CurrentDisplayComponent />
       </Stack>
@@ -71,6 +79,7 @@ export default function Intro() {
         onClick={handleNext}
         variant="contained"
         fullWidth
+        disabled={disableNextButton}
         className="bg-black"
       >
         다음
