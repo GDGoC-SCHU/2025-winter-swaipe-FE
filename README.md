@@ -1,13 +1,11 @@
 # 스와브팅 클라이언트
 
-## 환경
+## 개발 환경
 
 node: ^20 <br/>
 npm / pnpm 사용 <br/>
 
 npm run dev / pnpm run dev 로 프로젝트 실행 가능. 다른 js 라이브러리 패키지 사용해도 되지만, 무슨 문제가 발생할지 모름
-
-## 개발 환경
 
 react - 19 + next - 15 + ts 사용<br/>
 전역 상태 관리는 recoil, 사용 <br/>

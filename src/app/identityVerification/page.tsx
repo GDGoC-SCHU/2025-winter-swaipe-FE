@@ -11,16 +11,21 @@ import Information from "./Information"
 
 export default function Intro() {
   const router = useRouter()
+  const [disableNextButton, setDisableNextButton] = useState(true)
   const [currentComponentIndex, setCurrentComponentIndex] = useState(0)
 
   function CurrentDisplayComponent() {
     switch (currentComponentIndex) {
       case 0:
-        return <PhoneNumberVerification />
+        return (
+          <PhoneNumberVerification
+            setDisableNextButton={setDisableNextButton}
+          />
+        )
       case 1:
         return <ProfileImage />
       case 2:
-        return <Information />
+        return <Information setDisableNextButton={setDisableNextButton} />
       default:
         return undefined
     }
@@ -30,6 +35,10 @@ export default function Intro() {
     if (currentComponentIndex === 2) {
       router.push("/navigation/home")
       return
+    }
+    //Todo: 형은님 화면 만들면 조건 제거
+    if (currentComponentIndex !== 0) {
+      setDisableNextButton(true)
     }
     setCurrentComponentIndex((prev) => prev + 1)
   }
@@ -70,6 +79,7 @@ export default function Intro() {
         onClick={handleNext}
         variant="contained"
         fullWidth
+        disabled={disableNextButton}
         className="bg-black"
       >
         다음
