@@ -29,7 +29,11 @@ export default function PhoneNumberVerification({
       <Stack height="80%" gap="27px">
         <Box>본인 명의 휴대전화를 입력해주세요</Box>
         <Stack direction="row" gap="12px" alignItems="center">
-          <TextField variant="outlined" label="휴대전화 번호" />
+          <TextField
+            variant="outlined"
+            label="휴대전화 번호"
+            disabled={isConfirm}
+          />
           <Button
             size="small"
             variant="contained"
@@ -38,7 +42,6 @@ export default function PhoneNumberVerification({
             style={{
               padding: "0px",
               height: "40px",
-              backgroundColor: "black",
             }}
           >
             전송
@@ -48,7 +51,12 @@ export default function PhoneNumberVerification({
           {didSendMessage && (
             <Stack gap="27px">
               <Stack direction="row" gap="12px" alignItems="center">
-                <TextField variant="outlined" fullWidth label="인증번호" />
+                <TextField
+                  variant="outlined"
+                  fullWidth
+                  label="인증번호"
+                  disabled={isConfirm}
+                />
               </Stack>
               <Button
                 size="small"
@@ -58,7 +66,6 @@ export default function PhoneNumberVerification({
                 style={{
                   padding: "0px",
                   height: "40px",
-                  backgroundColor: "black",
                 }}
               >
                 확인

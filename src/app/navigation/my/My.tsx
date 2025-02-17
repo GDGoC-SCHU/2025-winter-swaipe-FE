@@ -36,7 +36,7 @@ export default function My() {
   ]
 
   return (
-    <Stack>
+    <Stack height="100%">
       <Stack textAlign="center" fontSize="20px" p="16px">
         당신의 선택이
         <br />
@@ -47,6 +47,8 @@ export default function My() {
         direction="row"
         overflow="auto"
         position="static"
+        alignItems="center"
+        flex="1"
         style={{
           scrollSnapType: "x mandatory",
           msOverflowStyle: "none",
