@@ -1,13 +1,14 @@
 "use client"
 
-import mainLogo from "@/common/images/mainLogo.png"
-import { Box, Button, Stack } from "@mui/material"
 import Image from "next/image"
 import { useState } from "react"
-import PhoneNumberVerification from "./PhoneNumberVerification"
-import ProfileImage from "./ProfileImage"
 import { useRouter } from "next/navigation"
+import mainLogo from "@/common/images/mainLogo.png"
+import { Box, Button, Stack } from "@mui/material"
+
 import Information from "./Information"
+import ProfileImage from "./ProfileImage"
+import PhoneNumberVerification from "./PhoneNumberVerification"
 
 export default function Intro() {
   const router = useRouter()
@@ -15,6 +16,7 @@ export default function Intro() {
   const [currentComponentIndex, setCurrentComponentIndex] = useState(0)
 
   function CurrentDisplayComponent() {
+    console.log(currentComponentIndex)
     switch (currentComponentIndex) {
       case 0:
         return (
@@ -22,6 +24,7 @@ export default function Intro() {
             setDisableNextButton={setDisableNextButton}
           />
         )
+
       case 1:
         return <ProfileImage />
       case 2:
@@ -52,9 +55,7 @@ export default function Intro() {
         width="101"
         height="111"
       />
-      <Stack className="flex-1">
-        <CurrentDisplayComponent />
-      </Stack>
+      <Stack className="flex-1">{CurrentDisplayComponent()}</Stack>
       <Stack direction="row" gap="8px">
         <Box
           width="12px"
