@@ -27,9 +27,7 @@ export default function Navigation() {
     <Stack height="100svh" direction="column" gap="12px" width="100%">
       <Stack className="p-4 flex-1 " alignItems="center" width="100%">
         <Image src={mainLogo} width="101" alt="mainLogo" />
-        <Stack>
-          <PageComponent page={currentPage} />
-        </Stack>
+        <PageComponent page={currentPage} />
       </Stack>
       <Stack
         gap="8px"

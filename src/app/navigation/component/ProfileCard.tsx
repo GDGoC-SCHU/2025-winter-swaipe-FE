@@ -2,6 +2,7 @@
 
 import { Box, Stack } from "@mui/material"
 import Image from "next/image"
+import TempProfileImage from "./temp_profile_image.png"
 
 interface ProfileCardProps {
   imageUrl: string
@@ -30,8 +31,10 @@ export default function ProfileCard({
         border="1px solid #ddd"
         borderRadius="8px"
         textAlign="center"
+        justifyContent="center"
+        alignContent="center"
       >
-        <Image src={imageUrl} width="100" height="400" alt="profileImage" />
+        <Image src={TempProfileImage} alt="profileImage" />
         <Box fontWeight="bold">{major}</Box>
         <Box>{studentNumber}학번</Box>
         <Box>{name}</Box>
