@@ -12,7 +12,6 @@ interface ProfileCardProps {
 }
 
 export default function ProfileCard({
-  imageUrl,
   name,
   studentNumber,
   major,

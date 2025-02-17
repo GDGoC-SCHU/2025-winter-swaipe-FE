@@ -1,5 +1,5 @@
 import { Box, Button, Stack, TextField } from "@mui/material"
-import { Dispatch, SetStateAction, useEffect, useState } from "react"
+import { Dispatch, SetStateAction, useState } from "react"
 
 export default function PhoneNumberVerification({
   setDisableNextButton,
