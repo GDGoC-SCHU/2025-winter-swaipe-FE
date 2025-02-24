@@ -1,4 +1,4 @@
-import { Box, Button, Stack } from "@mui/material"
+import { Button, Stack } from "@mui/material"
 import { Dispatch, SetStateAction, useEffect, useState } from "react"
 
 export default function ProfileImage({
@@ -6,7 +6,6 @@ export default function ProfileImage({
 }: {
   setDisableNextButton: Dispatch<SetStateAction<boolean>>
 }) {
-  const [isTakePicture, setIsTakePicture] = useState(false)
   const [imageData, setImageData] = useState<string | undefined>()
   useEffect(() => {
     loadCamera()
@@ -29,7 +28,6 @@ export default function ProfileImage({
   function takePicture() {
     if (imageData) {
       setImageData(undefined)
-      setIsTakePicture(false)
       setDisableNextButton(true)
       loadCamera()
       return
@@ -40,7 +38,6 @@ export default function ProfileImage({
     canvas.height = cameraView.videoHeight
     canvas.getContext("2d")?.drawImage(cameraView, 0, 0)
     const data = canvas.toDataURL("image/png")
-    setIsTakePicture(true)
     setDisableNextButton(false)
     setImageData(data)
   }

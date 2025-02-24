@@ -1,16 +1,9 @@
 "use client"
 
 import { profileCardDataList } from "@/api/profileCardData"
-import { Button, Stack } from "@mui/material"
-import { useRouter } from "next/navigation"
+import { Stack } from "@mui/material"
 
 export default function Alarm() {
-  const router = useRouter()
-
-  function goToPay() {
-    router.push("/pay")
-  }
-
   return (
     <Stack height="100%" flex="1">
       <Stack textAlign="center" fontSize="20px" p="16px">
