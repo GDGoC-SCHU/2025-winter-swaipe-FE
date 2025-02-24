@@ -17,12 +17,7 @@ export default function ProfileCard({
   major,
 }: ProfileCardProps) {
   return (
-    <Stack
-      pt="24px"
-      width="calc(100vw - 16px)"
-      justifyContent="center"
-      alignItems="center"
-    >
+    <Stack pt="24px" width="100vw" justifyContent="center" alignItems="center">
       <Stack
         p="8px"
         gap="8px"
