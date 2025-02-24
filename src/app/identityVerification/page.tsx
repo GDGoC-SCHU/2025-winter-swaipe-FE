@@ -16,7 +16,6 @@ export default function Intro() {
   const [currentComponentIndex, setCurrentComponentIndex] = useState(0)
 
   function CurrentDisplayComponent() {
-    console.log(currentComponentIndex)
     switch (currentComponentIndex) {
       case 0:
         return (
@@ -26,7 +25,7 @@ export default function Intro() {
         )
 
       case 1:
-        return <ProfileImage />
+        return <ProfileImage setDisableNextButton={setDisableNextButton} />
       case 2:
         return <Information setDisableNextButton={setDisableNextButton} />
       default:
@@ -39,10 +38,7 @@ export default function Intro() {
       router.push("/navigation")
       return
     }
-    //Todo: 형은님 화면 만들면 조건 제거
-    if (currentComponentIndex !== 0) {
-      setDisableNextButton(true)
-    }
+    setDisableNextButton(true)
     setCurrentComponentIndex((prev) => prev + 1)
   }
 
