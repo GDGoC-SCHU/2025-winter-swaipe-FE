@@ -1,10 +1,8 @@
 "use client"
 
 import { Button, Stack } from "@mui/material"
-import HeartFill from "../navigation/home/heart_fill.png"
 import Image from "next/image"
 import mainLogo from "@/common/images/mainLogo.png"
-import { profileCardDataList } from "@/api/profileCardData"
 import { useRouter } from "next/navigation"
 
 export default function Pay() {
