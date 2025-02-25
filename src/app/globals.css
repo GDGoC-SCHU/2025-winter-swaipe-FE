@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --variant-containedBg: #171717 !important;
 }
 
 /* dark mode

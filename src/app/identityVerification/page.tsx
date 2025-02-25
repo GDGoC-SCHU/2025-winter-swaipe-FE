@@ -35,7 +35,7 @@ export default function Intro() {
 
   function handleNext() {
     if (currentComponentIndex === 2) {
-      router.push("/navigation")
+      router.push("/select")
       return
     }
     setDisableNextButton(true)
